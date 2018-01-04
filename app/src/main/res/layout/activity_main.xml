@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sample.touch.event.MainActivity">
+
+    <!--Outer View Group-->
+    <TextView
+        android:id="@+id/outer_view_group_interception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="4dp"
+        android:text="onInterceptTouchEvent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/outer_view_group_radio_button_interception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/outer_view_group_interception"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outer_view_group_interception">
+
+        <RadioButton
+            android:id="@+id/outer_view_group_interception_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_interception_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_interception_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/outer_view_group_text_view_on_touch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="4dp"
+        android:text="onTouchEvent"
+        app:layout_constraintStart_toEndOf="@+id/outer_view_group_interception"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/outer_view_group_on_touch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/outer_view_group_text_view_on_touch_event"
+        app:layout_constraintStart_toEndOf="@+id/outer_view_group_interception"
+        app:layout_constraintTop_toBottomOf="@+id/outer_view_group_text_view_on_touch_event">
+
+        <RadioButton
+            android:id="@+id/outer_view_group_on_touch_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_on_touch_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_on_touch_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/outer_view_group_textView_dispatch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="4dp"
+        android:text="dispatchTouchEvent"
+        app:layout_constraintStart_toEndOf="@+id/outer_view_group_text_view_on_touch_event"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/outer_view_group_dispatch_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#40FF0000"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/outer_view_group_textView_dispatch_event"
+        app:layout_constraintStart_toStartOf="@+id/outer_view_group_textView_dispatch_event"
+        app:layout_constraintTop_toBottomOf="@+id/outer_view_group_textView_dispatch_event">
+
+        <RadioButton
+            android:id="@+id/outer_view_group_dispatch_event_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_dispatch_event_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/outer_view_group_dispatch_event_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <!--Inner View Group-->
+    <TextView
+        android:id="@+id/inner_view_group_interception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="4dp"
+        android:text="onInterceptTouchEvent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outer_view_group_radio_button_interception" />
+
+    <RadioGroup
+        android:id="@+id/inner_view_group_radio_button_interception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/inner_view_group_interception"
+        app:layout_constraintStart_toStartOf="@id/inner_view_group_interception"
+        app:layout_constraintTop_toBottomOf="@+id/inner_view_group_interception">
+
+        <RadioButton
+            android:id="@+id/inner_view_group_interception_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_interception_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_interception_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/inner_view_group_text_view_on_touch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="4dp"
+        android:text="onTouchEvent"
+        app:layout_constraintStart_toEndOf="@id/inner_view_group_interception"
+        app:layout_constraintTop_toTopOf="@id/inner_view_group_interception" />
+
+    <RadioGroup
+        android:id="@+id/inner_view_group_on_touch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inner_view_group_text_view_on_touch_event"
+        app:layout_constraintStart_toStartOf="@+id/inner_view_group_text_view_on_touch_event"
+        app:layout_constraintTop_toBottomOf="@+id/inner_view_group_text_view_on_touch_event">
+
+        <RadioButton
+            android:id="@+id/inner_view_group_on_touch_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_on_touch_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_on_touch_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/inner_view_group_textView_dispatch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="4dp"
+        android:text="dispatchTouchEvent"
+        app:layout_constraintStart_toEndOf="@id/inner_view_group_text_view_on_touch_event"
+        app:layout_constraintTop_toTopOf="@id/inner_view_group_text_view_on_touch_event" />
+
+    <RadioGroup
+        android:id="@+id/inner_view_group_dispatch_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#4000FF00"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/inner_view_group_textView_dispatch_event"
+        app:layout_constraintStart_toStartOf="@id/inner_view_group_textView_dispatch_event"
+        app:layout_constraintTop_toBottomOf="@+id/inner_view_group_textView_dispatch_event">
+
+        <RadioButton
+            android:id="@+id/inner_view_group_dispatch_event_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_dispatch_event_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/inner_view_group_dispatch_event_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <!--View-->
+    <TextView
+        android:id="@+id/view_interception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="4dp"
+        android:text="onInterceptTouchEvent"
+        app:layout_constraintStart_toStartOf="@id/inner_view_group_interception"
+        app:layout_constraintTop_toBottomOf="@+id/inner_view_group_radio_button_interception" />
+
+    <RadioGroup
+        android:id="@+id/view_radio_button_interception"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/view_interception"
+        app:layout_constraintStart_toStartOf="@id/view_interception"
+        app:layout_constraintTop_toBottomOf="@+id/view_interception">
+
+        <RadioButton
+            android:id="@+id/view_interception_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/view_interception_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/view_interception_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/view_text_view_on_touch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="4dp"
+        android:text="onTouchEvent"
+        app:layout_constraintStart_toEndOf="@id/view_interception"
+        app:layout_constraintTop_toTopOf="@id/view_interception" />
+
+    <RadioGroup
+        android:id="@+id/view_on_touch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/view_text_view_on_touch_event"
+        app:layout_constraintStart_toStartOf="@+id/view_text_view_on_touch_event"
+        app:layout_constraintTop_toBottomOf="@+id/view_text_view_on_touch_event">
+
+        <RadioButton
+            android:id="@+id/view_on_touch_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/view_on_touch_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/view_on_touch_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/view_textView_dispatch_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="4dp"
+        android:text="dispatchTouchEvent"
+        app:layout_constraintStart_toEndOf="@id/view_text_view_on_touch_event"
+        app:layout_constraintTop_toTopOf="@id/view_text_view_on_touch_event" />
+
+    <RadioGroup
+        android:id="@+id/view_dispatch_event"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#400000FF"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/view_textView_dispatch_event"
+        app:layout_constraintStart_toStartOf="@id/view_textView_dispatch_event"
+        app:layout_constraintTop_toBottomOf="@+id/view_textView_dispatch_event">
+
+        <RadioButton
+            android:id="@+id/view_dispatch_event_true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true" />
+
+        <RadioButton
+            android:id="@+id/view_dispatch_event_false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="false" />
+
+        <RadioButton
+            android:id="@+id/view_dispatch_event_super"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="super" />
+    </RadioGroup>
+
+    <!--Testing Area-->
+    <TextView
+        android:id="@+id/testing_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="测试区域"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/view_radio_button_interception" />
+
+    <com.sample.touch.event.OuterViewGroup
+        android:id="@+id/outer_view_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="#40FF0000"
+        android:paddingBottom="20dp"
+        android:paddingEnd="40dp"
+        android:paddingStart="40dp"
+        android:paddingTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testing_area">
+
+        <com.sample.touch.event.InnerViewGroup
+            android:id="@+id/inner_view_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4000FF00"
+            android:paddingBottom="20dp"
+            android:paddingEnd="40dp"
+            android:paddingStart="40dp"
+            android:paddingTop="80dp">
+
+            <com.sample.touch.event.InnerView
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#400000FF"
+                android:padding="40dp"
+                android:text="Hello World!"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.sample.touch.event.InnerViewGroup>
+
+    </com.sample.touch.event.OuterViewGroup>
+
+</android.support.constraint.ConstraintLayout>
