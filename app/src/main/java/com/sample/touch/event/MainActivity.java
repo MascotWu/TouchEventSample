@@ -9,6 +9,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnCheckedChanged;
 
+/**
+ * 第一次修改
+ */
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.outer_view_group)
     OuterViewGroup outerViewGroup;
